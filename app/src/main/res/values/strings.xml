@@ -1,4 +1,5 @@
 <resources>
-   <string name="app_name">LaufApp</string>
+   <string name="app_name">Die Lauf-App</string>
+   <string name="app_description">Ein Kalorienrechner für LäuferInnen</string>
    <string name="action_settings">Settings</string>
 </resources>
