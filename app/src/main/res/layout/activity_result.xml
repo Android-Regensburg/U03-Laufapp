@@ -51,7 +51,6 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
-
         </LinearLayout>
 
         <LinearLayout
@@ -76,7 +75,6 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="30sp"
                 android:textStyle="bold" />
-
 
         </LinearLayout>
 
@@ -103,11 +101,8 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
-
         </LinearLayout>
 
-
     </LinearLayout>
-
 
 </LinearLayout>

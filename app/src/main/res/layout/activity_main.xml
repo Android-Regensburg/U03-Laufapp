@@ -46,8 +46,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:weightSum="100"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="100">
 
             <!-- Das TextView nutzt 40% des verfügbaren Platzes im Elternelement -->
             <TextView
@@ -75,8 +75,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:weightSum="100"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="100">
 
             <TextView
                 android:layout_width="0dp"
@@ -102,8 +102,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:weightSum="100"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="100">
 
             <TextView
                 android:layout_width="0dp"
@@ -130,10 +130,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:background="@color/colorPrimary"
-            android:textColor="@color/colorBackground"
-            android:text="@string/buttonLabel"/>
+            android:text="@string/buttonLabel"
+            android:textColor="@color/colorBackground" />
 
     </LinearLayout>
-
 
 </LinearLayout>

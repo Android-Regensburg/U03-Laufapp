@@ -41,7 +41,8 @@ public class ResultActivity extends AppCompatActivity {
         helper.setTime(extra.getDouble(StartActivity.TIME_KEY));
         helper.setBreakTime(extra.getDouble(StartActivity.BREAK_KEY));
         distanceResult.setText(String.valueOf(extra.getDouble(StartActivity.DISTANCE_KEY)));
-        caloriesResult.setText(String.valueOf(helper.getBurnedKilocalories()));
+        // Für die Darstellung im User Interface wird der Kalorienverbrauch gerundet
+        caloriesResult.setText(String.valueOf(Math.round(helper.getBurnedKilocalories())));
         // Formatierung der Geschwindigkeit in mehreren Schritte:
         // StatsHelper gibt die Geschwindigkeit (Minunten pro Kilometer) als Fließkommazahl zurück.
         // Der Minuten-Wert wird durch einen Cast auf einen Integer-Wert erzeugt (Reduktion der
