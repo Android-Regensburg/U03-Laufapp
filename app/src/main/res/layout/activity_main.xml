@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- TextView für Überschrift ("Die Lauf-App") -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,6 +21,7 @@
             android:textColor="@color/colorPrimary"
             android:textSize="20sp" />
 
+        <!-- TextView für Untertitel ("Ein Kalorienrechner für LäuferInnen") -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,6 +30,7 @@
             android:textColor="@color/colorAccent"
             android:textSize="16sp" />
 
+        <!-- App-Beschreibung und Anleitung -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,42 +40,48 @@
             android:text="@string/usage"
             android:textSize="14sp" />
 
-
+        <!-- UI-Bereich für Eingabe der zurückgelegten Strecke -->
+        <!-- Über die weightSum wird der gesamte verfügbare Platz für die Kindelemente definiert -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:weightSum="100"
             android:orientation="horizontal">
 
+            <!-- Das TextView nutzt 40% des verfügbaren Platzes im Elternelement -->
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
+                android:layout_weight="40"
                 android:text="@string/label_distance"
                 android:textAlignment="textEnd"
                 android:textStyle="bold" />
 
+            <!-- Das EditText-Feld nutzt 60% des verfügbaren Platzes im Elternelement -->
             <EditText
                 android:id="@+id/distanceInput"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_weight="3"
+                android:layout_weight="60"
                 android:hint="@string/hint_distance"
                 android:inputType="numberDecimal" />
 
         </LinearLayout>
 
+        <!-- UI-Bereich für Eingabe der benötigten Zeit -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:weightSum="100"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
+                android:layout_weight="40"
                 android:text="@string/label_time"
                 android:textAlignment="textEnd"
                 android:textStyle="bold" />
@@ -82,22 +91,24 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_weight="3"
+                android:layout_weight="60"
                 android:hint="@string/hint_time"
                 android:inputType="time" />
 
         </LinearLayout>
 
+        <!-- UI-Bereich für Eingabe der gemachten Pausen -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:weightSum="100"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
+                android:layout_weight="40"
                 android:text="@string/label_break"
                 android:textAlignment="textEnd"
                 android:textStyle="bold" />
@@ -107,7 +118,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_weight="3"
+                android:layout_weight="60"
                 android:hint="@string/hint_break"
                 android:inputType="time" />
 
