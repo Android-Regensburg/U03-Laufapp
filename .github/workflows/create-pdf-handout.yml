@@ -15,6 +15,7 @@ jobs:
       - name: Install Dependencies
         run: tlmgr install german
       - name: Create Output Dir
+        run: mkdir output
       - name: Build Document
         run: pandoc --output=output/$CLASS_NAME$REPO_NAME.pdf Readme.md
       - name: Upload PDF
