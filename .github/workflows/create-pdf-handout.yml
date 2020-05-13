@@ -20,7 +20,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: pdf
-          path: ${{CLASS_NAME}}${{$REPO_NAME}}.pdf
+          path: ${{ CLASS_NAME }}${{ $REPO_NAME }}.pdf
   commit_handout_to_repo:
     runs-on: ubuntu-latest
     needs: convert_handout_via_pandoc
