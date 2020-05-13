@@ -11,7 +11,7 @@ jobs:
       - name: Install dependencies
         run: tlmgr install german
       - name: Build document
-        run: pandoc -output=output/Handout.pdf Readme.md
+        run: pandoc --output=output/Handout.pdf Readme.md
       - uses: actions/upload-artifact@master
         with:
           name: output
