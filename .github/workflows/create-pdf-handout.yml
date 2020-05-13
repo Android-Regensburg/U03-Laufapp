@@ -32,5 +32,13 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: pdf
+      - name: Add And Commit
+      - uses: EndBug/add-and-commit@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Check Status
         run: git status
+      - name: Add And Commit
+        with:
+          add: "*.pdf"
+          message: "Automatisch erzeugtes Handout-PDF hinzugefügt"
