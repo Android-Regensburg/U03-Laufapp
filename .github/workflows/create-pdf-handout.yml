@@ -10,6 +10,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: tlmgr install german
+      - name: Create Output Dir
+        run: mkdir output
       - name: Build document
         run: pandoc --output=output/Handout.pdf Readme.md
       - uses: actions/upload-artifact@master
