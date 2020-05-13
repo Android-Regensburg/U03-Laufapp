@@ -3,10 +3,34 @@ name: Create PDF Handout
 on: push
 
 jobs:
-  checkout_and_commit:
+  convert_handout_via_pandoc:
+    runs-on: ubuntu-latest
+    container: docker://pandoc/latex:2.9
+    env:
+      CLASS_NAME: Android-SS2020-
+      REPO_NAME: ${{ github.event.repository.name }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: tlmgr install german
+      - name: Create Output Dir
+      - name: Build Document
+        run: pandoc --output=output/$CLASS_NAME$REPO_NAME.pdf Readme.md
+      - name: Upload PDF
+        uses: actions/upload-artifact@master
+        with:
+          name: pdf
+          path: output
+  commit_handout_to_repo:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+      - name: Download PDF
+        uses: actions/download-artifact@v2
+        with:
+          name: pdf
+          path: pdf
       - name: Check Status
         run: git status
