@@ -10,16 +10,19 @@ jobs:
       CLASS_NAME: Android-SS2020-
       REPO_NAME: ${{ github.event.repository.name }}
     steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Install Dependencies
         run: tlmgr install german
-      - name: Create Output Dir
-        run: mkdir output
-      - name: Build document
+      - name: Build Document
         run: pandoc --output=$CLASS_NAME$REPO_NAME.pdf Readme.md
-      - uses: EndBug/add-and-commit@v4
+      - name: Check
+        run: ls -la
+      - name: Commit Generated PDF
+        uses: EndBug/add-and-commit@v4
         with:
-          add: '*.pdf'
+          add: ' $CLASS_NAME$REPO_NAME.pdf'
+          force: true
           message: 'Automatisch generiertes Handout-PDF hinzugefügt'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
