@@ -16,8 +16,10 @@ jobs:
       - name: Create Output Dir
         run: mkdir output
       - name: Build document
-        run: pandoc --output=output/$CLASS_NAME$REPO_NAME.pdf Readme.md
-      - uses: actions/upload-artifact@master
+        run: pandoc --output=$CLASS_NAME$REPO_NAME.pdf Readme.md
+      - uses: EndBug/add-and-commit@v4
         with:
-          name: output
-          path: output
+          add: '*.pdf'
+          message: 'Automatisch generiertes Handout-PDF hinzugefügt'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
