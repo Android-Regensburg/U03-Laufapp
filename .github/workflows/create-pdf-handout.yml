@@ -5,13 +5,13 @@ on: push
 jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
+    container: docker://pandoc/latex:2.9
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
         run: tlmgr install german
-      - uses: docker://pandoc/latex:2.9
-        with:
-          args: --output=output/Handout.pdf Readme.md
+      - name: Build document
+        run: pandoc -output=output/Handout.pdf Readme.md
       - uses: actions/upload-artifact@master
         with:
           name: output
