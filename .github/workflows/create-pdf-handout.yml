@@ -16,13 +16,11 @@ jobs:
         run: tlmgr install german
       - name: Build Document
         run: pandoc --output=$CLASS_NAME$REPO_NAME.pdf Readme.md
-      - name: Check
-        run: ls -la
       - name: Commit Generated PDF
         uses: EndBug/add-and-commit@v4
         with:
-          add: ' $CLASS_NAME$REPO_NAME.pdf'
+          add: "*.pdf"
           force: true
-          message: 'Automatisch generiertes Handout-PDF hinzugefügt'
+          message: "Automatisch generiertes Handout-PDF hinzugefügt"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
