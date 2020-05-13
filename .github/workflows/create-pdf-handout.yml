@@ -3,24 +3,10 @@ name: Create PDF Handout
 on: push
 
 jobs:
-  convert_via_pandoc:
-    runs-on: ubuntu-18.04
-    container: docker://pandoc/latex:2.9
-    env:
-      CLASS_NAME: Android-SS2020-
-      REPO_NAME: ${{ github.event.repository.name }}
+  checkout_and_commit:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-      - name: Install Dependencies
-        run: tlmgr install german
-      - name: Build Document
-        run: pandoc --output=$CLASS_NAME$REPO_NAME.pdf Readme.md
-      - name: Commit Generated PDF
-        uses: EndBug/add-and-commit@v4
-        with:
-          add: "*.pdf"
-          force: true
-          message: "Automatisch generiertes Handout-PDF hinzugefügt"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check Status
+        run: git status
