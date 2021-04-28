@@ -33,7 +33,7 @@ public class ResultActivity extends AppCompatActivity {
 
     private void showResults() {
         StatsHelper helper = new StatsHelper();
-        // Auslesen aller  übergebenen Werte aus dem Intent
+        // Auslesen aller übergebenen Werte aus dem Intent
         Bundle extra = getIntent().getExtras();
         // Zugriff und Verwendung einzelner Werte über die Getter-Funktionen und die öffentlichen
         // Key-Konstanten aus StartActivity
@@ -43,12 +43,12 @@ public class ResultActivity extends AppCompatActivity {
         distanceResult.setText(String.valueOf(extra.getDouble(StartActivity.DISTANCE_KEY)));
         // Für die Darstellung im User Interface wird der Kalorienverbrauch gerundet
         caloriesResult.setText(String.valueOf(Math.round(helper.getBurnedKilocalories())));
-        // Formatierung der Geschwindigkeit in mehreren Schritte:
-        // StatsHelper gibt die Geschwindigkeit (Minunten pro Kilometer) als Fließkommazahl zurück.
+        // Formatierung der Geschwindigkeit in mehreren Schritten:
+        // StatsHelper gibt die Geschwindigkeit (Minuten pro Kilometer) als Fließkommazahl zurück.
         // Der Minuten-Wert wird durch einen Cast auf einen Integer-Wert erzeugt (Reduktion der
         // Genauigkeit, bzw. Streichen der Nachkommastellen)
         int minutes = (int) helper.getPace();
-        // Der Sekunden-Wert wird durch Umrechung des verbleibenden Dezimalwerts hinter dem Komma
+        // Der Sekunden-Wert wird durch Umrechnung des verbleibenden Dezimalwerts hinter dem Komma
         // ermittelt (0.5 * 60 => 30 Sekunden)
         int seconds = (int) ((helper.getPace() - minutes) * 60);
         // Für eine "schönere" Darstellung werden führende Nullen ergänzt, wenn die ermittelten

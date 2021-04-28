@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * Diese Anwendung erlaubt LäuferInnen, die Geschwindigkeit und den geschätzten Kalorienverbrauch
  * von einzelnen Läufen zu berechnen. Dazu werden zurückgelegte Strecke, benötigte Zeit und etwaige
  * Pausenzeiten eingegeben. Auf Basis dieser Eingaben ermittelt die App die durchschnittliche
- * Geschwindikgeit (Pace) in Minuten pro Kilometer und gibt eine Schätzung für die dabei verbrannten
+ * Geschwindigkeit (Pace) in Minuten pro Kilometer und gibt eine Schätzung für die dabei verbrannten
  * Kalorien aus.
  */
 
@@ -52,7 +52,7 @@ public class StartActivity extends AppCompatActivity {
         breakInput = findViewById(R.id.breakInput);
         Button button = findViewById(R.id.statsButton);
         // Der Listener für den Klick/Touch auf den Button wird als innere,
-        // annonyme Klasse erzeugt. In der zu implementierende Callback-Methode
+        // anonyme Klasse erzeugt. In der zu implementierende Callback-Methode
         // wird auf eine Methode (onResultButtonClicked) der umschließenden Activity
         // verwiesen.
         button.setOnClickListener(new View.OnClickListener() {
