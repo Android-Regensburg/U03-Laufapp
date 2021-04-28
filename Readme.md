@@ -39,4 +39,4 @@ Lesen Sie beim Start der zweiten Activity die übergebenen Werte aus den *Extras
 
 ## Screenshots der Anwendung
 
-![Screenshot der Laufapp](./docs/screeshots-u03-Laufapp.png)
+![Screenshot der Laufapp](./docs/screeshots-u03-Laufapp.png){ height=10cm }
