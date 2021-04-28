@@ -1,28 +1,4 @@
----
-title: Die Lauf-App
-author: Zuletzt bearbeitet von Alexander Bazo
-documentclass: scrartcl
-classoption:
-  - a4paper
-header-includes: |
-    \usepackage{german} 
-    \usepackage[a4paper,left=2.5cm, right=2.5cm,top=2.5cm, bottom=3cm]{geometry}
-    \usepackage{fancyhdr}
-    \pagestyle{fancy}
-    \fancyhf{}
-    \rhead{Mobile Apps für Android}
-    \lhead{Übungsaufgaben}
-    \cfoot{\includegraphics[height=2cm]{docs/footer.png}}
-    \fancypagestyle{plain}{
-      \fancyhf{}
-      \rhead{Mobile Apps für Android}
-      \lhead{Übungsaufgaben}
-      \cfoot[C]{\includegraphics[height=2cm]{docs/footer.png}}}
----
-
 # 03 | Laufapp
-
-![](./docs/cover.png)
 
 ## Aufgabenstellung
 
@@ -40,7 +16,7 @@ Die notwendigen Daten zur Berechnung des Kalorienverbrauchs werden in der `Start
 
 ## Vorgehen
 
-### Starterpaket 
+### Starterpaket
 
 Laden Sie sich das Starterprojekt aus dem ILIAS-Kurs herunter, entpacken Sie den Projektordner auf Ihrem Rechner und öffnen Sie das Projekt in *Android Studio*. Beim ersten Start synchronisiert *Android Studio* die Projektinhalte und installiert ggf. noch fehlende Abhängigkeiten. Das merken Sie an einem Fortschrittsbalken unten rechts in der IDE. Testen Sie anschließend, ob Sie die Anwendung im vorgegebenen Zustand im Emulator ausführen können. **Im Starterpaket finden Sie auch die `StatsHelper`-Klasse für die Berechnung der Geschwindigkeit und der verbrannten Kalorien.
 
@@ -63,6 +39,5 @@ Lesen Sie beim Start der zweiten Activity die übergebenen Werte aus den *Extras
 
 ## Screenshots der Anwendung
 
-| | |
-|-|-|
-|![Screenshot der Laufapp](./docs/screenshot-1.png ){ height=10cm } |![Screenshot der Laufapp](./docs/screenshot-2.png ){ height=10cm } |
+
+![Screenshot der Laufapp](./docs/screeshots-u03-Laufapp.png )
