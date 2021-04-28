@@ -8,11 +8,9 @@ Die notwendigen Daten zur Berechnung des Kalorienverbrauchs werden in der `Start
 
 ## Hinweise
 
-* Verwenden Sie für die Berechnung des Kalorienverbrauchs und des *Pace* die Klasse `StatsHelper` aus dem Starterpaket. Die dort implementierte Funktionalität ist über kommentierte, öffentliche Methoden zugänglich.
-
-* Verwenden Sie für die Eingabe der notwendigen Daten `EditText`-Elemente. Um mögliche "Fehleingaben" direkt auszuschließen, können Sie über den [Input Type](https://developer.android.com/training/keyboard-input/style) festlegen, welche Art von Text (Zahlen, Telefonnummer, Passwörter) über ein bestimmtes `EditText` eingegeben werden kann.
-
-* Denken Sie an die qualitative hochwertige Gestaltung des Quellcodes. Verwenden Sie zusätzliche Methoden um Ihren Code zu strukturieren. Lagern Sie Beschriftungen konsequent in die Ressourcen-Dateien aus. Verwenden Sie *Activity*-übergreifend zugängliche Konstanten, um Werte in den *Intent*-Extras zu identifizieren. Nutzen Sie passende Bezeichner für Variablen und Methodennamen. Überarbeiten Sie Ihren Code regelmäßig und gewöhnen Sie sich an, [stets nach Verbesserungsmöglichkeiten zu suchen](https://martinfowler.com/bliki/OpportunisticRefactoring.html).
+- Verwenden Sie für die Berechnung des Kalorienverbrauchs und des *Pace* die Klasse `StatsHelper` aus dem Starterpaket. Die dort implementierte Funktionalität ist über kommentierte, öffentliche Methoden zugänglich.
+- Verwenden Sie für die Eingabe der notwendigen Daten `EditText`-Elemente. Um mögliche "Fehleingaben" direkt auszuschließen, können Sie über den [Input Type](https://developer.android.com/training/keyboard-input/style) festlegen, welche Art von Text (Zahlen, Telefonnummer, Passwörter) über ein bestimmtes `EditText` eingegeben werden kann.
+- Denken Sie an die qualitative hochwertige Gestaltung des Quellcodes. Verwenden Sie zusätzliche Methoden um Ihren Code zu strukturieren. Lagern Sie Beschriftungen konsequent in die Ressourcen-Dateien aus. Verwenden Sie *Activity*-übergreifend zugängliche Konstanten, um Werte in den *Intent*-Extras zu identifizieren. Nutzen Sie passende Bezeichner für Variablen und Methodennamen. Überarbeiten Sie Ihren Code regelmäßig und gewöhnen Sie sich an, [stets nach Verbesserungsmöglichkeiten zu suchen](https://martinfowler.com/bliki/OpportunisticRefactoring.html).
 
 ## Vorgehen
 
