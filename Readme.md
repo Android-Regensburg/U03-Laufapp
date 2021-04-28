@@ -38,6 +38,3 @@ Lesen Sie beim Start der zweiten Activity die übergebenen Werte aus den *Extras
 - Die Geschwindigkeit wird im Format `MM:SS` angezeigt, z.b. als `05:40`.
 
 ## Screenshots der Anwendung
-
-
-![Screenshot der Laufapp](./docs/screeshots-u03-Laufapp.png )
