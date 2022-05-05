@@ -3,5 +3,5 @@
   "abstract": "Anknüpfend an die vorherige Aufgabe, machen Sie sich auch hier mit den wichtigsten Konzepten von Activities und Intents vertraut. Sie planen und implementieren ein fortgeschritteneres Layout für das User Interface Ihrer Anwendung, entwickeln mehrere Activities und nutzen Events und Intents um den Wechsel zwischen diesen zu ermöglichen. Screenshots zu einer möglichen Lösung finden Sie am Ende der Anleitung.",
   "hasStarterCode": true,
   "hasSolutionCode": true,
-  "solutionAvailableOn": "2021-05-06"
+  "solutionAvailableOn": "2022-05-12"
 }

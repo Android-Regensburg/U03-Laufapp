@@ -16,7 +16,7 @@ Die notwendigen Daten zur Berechnung des Kalorienverbrauchs werden in der `Start
 
 ### Starterpaket
 
-Laden Sie sich das Starterprojekt aus dem ILIAS-Kurs herunter, entpacken Sie den Projektordner auf Ihrem Rechner und öffnen Sie das Projekt in *Android Studio*. Beim ersten Start synchronisiert *Android Studio* die Projektinhalte und installiert ggf. noch fehlende Abhängigkeiten. Das merken Sie an einem Fortschrittsbalken unten rechts in der IDE. Testen Sie anschließend, ob Sie die Anwendung im vorgegebenen Zustand im Emulator ausführen können. **Im Starterpaket finden Sie auch die `StatsHelper`-Klasse für die Berechnung der Geschwindigkeit und der verbrannten Kalorien.**
+Laden Sie sich das Starterprojekt herunter, das Sie links auf dieser Seite finden. Entpacken Sie den Projektordner auf Ihrem Rechner und öffnen Sie das Projekt in *Android Studio*. Beim ersten Start synchronisiert *Android Studio* die Projektinhalte und installiert ggf. noch fehlende Abhängigkeiten. Das merken Sie an einem Fortschrittsbalken unten rechts in der IDE. Testen Sie anschließend, ob Sie die Anwendung im vorgegebenen Zustand im Emulator ausführen können. **Im Starterpaket finden Sie auch die `StatsHelper`-Klasse für die Berechnung der Geschwindigkeit und der verbrannten Kalorien.**
 
 ### StartActivity: Das User Interface
 
