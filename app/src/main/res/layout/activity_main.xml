@@ -1,138 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp">
+    tools:context=".StartActivity">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/app_title_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:padding="20dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/primary"
+        android:textSize="32sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- TextView für Überschrift ("Die Lauf-App") -->
-        <TextView
+    <TextView
+        android:id="@+id/app_subtitle_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_description"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_title_label" />
+
+    <TextView
+        android:id="@+id/app_usage_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineHeight="24sp"
+        android:padding="16dp"
+        android:text="@string/app_usage"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_subtitle_label" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@id/button_show_stats"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_usage_description">
+
+        <EditText
+            android:id="@+id/input_distance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp" />
+            android:layout_margin="10dp"
+            android:hint="@string/hint_distance"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- TextView für Untertitel ("Ein Kalorienrechner für LäuferInnen") -->
-        <TextView
+        <EditText
+            android:id="@+id/input_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_description"
-            android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="16sp" />
+            android:layout_margin="10dp"
+            android:hint="@string/hint_time"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_distance" />
 
-        <!-- App-Beschreibung und Anleitung -->
-        <TextView
+        <EditText
+            android:id="@+id/input_break"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:lineHeight="21sp"
-            android:text="@string/usage"
-            android:textSize="14sp" />
+            android:layout_margin="10dp"
+            android:hint="@string/hint_break"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_time" />
 
-        <!-- UI-Bereich für Eingabe der zurückgelegten Strecke -->
-        <!-- Über die weightSum wird der gesamte verfügbare Platz für die Kindelemente definiert -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:weightSum="100">
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- Das TextView nutzt 40% des verfügbaren Platzes im Elternelement -->
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="40"
-                android:text="@string/label_distance"
-                android:textAlignment="textEnd"
-                android:textStyle="bold" />
+    <Button
+        android:id="@+id/button_show_stats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/label_stats_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
-            <!-- Das EditText-Feld nutzt 60% des verfügbaren Platzes im Elternelement -->
-            <EditText
-                android:id="@+id/distanceInput"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="60"
-                android:hint="@string/hint_distance"
-                android:inputType="numberDecimal" />
-
-        </LinearLayout>
-
-        <!-- UI-Bereich für Eingabe der benötigten Zeit -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:weightSum="100">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="40"
-                android:text="@string/label_time"
-                android:textAlignment="textEnd"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/timeInput"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="60"
-                android:hint="@string/hint_time"
-                android:inputType="time" />
-
-        </LinearLayout>
-
-        <!-- UI-Bereich für Eingabe der gemachten Pausen -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:weightSum="100">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="40"
-                android:text="@string/label_break"
-                android:textAlignment="textEnd"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/breakInput"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="60"
-                android:hint="@string/hint_break"
-                android:inputType="time" />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/statsButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:background="@color/colorPrimary"
-            android:text="@string/buttonLabel"
-            android:textColor="@color/colorBackground" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
