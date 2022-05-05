@@ -48,8 +48,6 @@ Verwenden Sie die übergebenen Daten, um in der zweiten Activity sinnvolle Ergeb
 
 ## Screenshots der Anwendung
 
-![Screenshot der Laufapp](./docs/screeshots-u03-Laufapp.png)
-
 | Activity zur Eingabe der Laufdaten | Activity zur Anzeige der berechneten Ergebnisse |
 |:------:|:------:|
 | ![Screenshot der Laufapps, Eingabe](./docs/screenshot-1.png "Screenshot der Laufapp, Eingabe") | ![Screenshot der Laufapps, Ergebnisse](./docs/screenshot-2.png "Screenshot der Laufapp, Ergebnisse") |
