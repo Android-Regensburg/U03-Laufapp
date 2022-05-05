@@ -15,6 +15,12 @@ public class Run {
     public final int totalTime; // Gesamtzeit in Sekunden
     public final int breakTime; // Pausenzeit in Sekunden
 
+    /**
+     * Erstellt ein neues Datenobjekt für einen Lauf der Nutzer*innen.
+     * @param distance Gelaufende Distanz in Metern
+     * @param totalTime Gesamtzeit in Sekunden
+     * @param breakTime Pausenzeit in Sekunden
+     */
     public Run(int distance, int totalTime, int breakTime) {
         this.distance = distance;
         this.totalTime = totalTime;
@@ -25,11 +31,12 @@ public class Run {
      * Gibt den durchschnittlichen Pace für diesen Lauf in Minuten pro Kilometer zurück. Für die
      * Berechnung wird die angegebene Gesamtdistanz sowie die gelaufene Zeit abzuüglich der
      * angegebenen Pausenzeiten verwendet.
+     *
      * @return Der durchschnittliche Pace für diesen Lauf in Minuten pro Kilometer.
      */
     public float getPace() {
         float distanceInKilometers = distance / 1000;
-        float timeInMinutes = (totalTime - breakTime) / 60;
+        float timeInMinutes = (totalTime - breakTime) / 60f;
         return timeInMinutes / distanceInKilometers;
     }
 
@@ -38,11 +45,12 @@ public class Run {
      * Berechnung sind die gelaufene Zeite abzuüglich der Pausenzeiten und der dabei erreichte,
      * durchschnittliche Pace. Die Berechnung geht von einem durchschnittlichen Körpergewicht der
      * Läufer*innen von 65kg aus.
+     *
      * @return Geschätze Anzahl der mit diesem Lauf umgesetzten Kalorien.
      */
     public float getCalories() {
         PaceLevel paceLevel = PaceLevel.fromPace(getPace());
-        float timeInHours = (totalTime - breakTime) / 360;
+        float timeInHours = (totalTime - breakTime) / 3600f;
         return timeInHours * paceLevel.caloriesPerHour;
     }
 }
