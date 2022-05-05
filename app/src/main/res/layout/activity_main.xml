@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    tools:context=".StartActivity">
 
         <TextView
+            android:id="@+id/app_title_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp"
-            android:textAlignment="center"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="20dp"
+            android:textSize="32sp"
+            android:textAlignment="center"
+            android:textColor="@color/primary"
+            android:text="@string/app_name"/>
 
         <TextView
+            android:id="@+id/app_subtitle_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_description"
-            android:textColor="@color/colorAccent"
-            android:textSize="16sp"
-            android:textAlignment="center"/>
+            app:layout_constraintTop_toBottomOf="@+id/app_title_label"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:text="@string/app_description"/>
 
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
