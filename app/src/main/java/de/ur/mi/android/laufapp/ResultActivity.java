@@ -1,6 +1,7 @@
 package de.ur.mi.android.laufapp;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -44,11 +45,11 @@ public class ResultActivity extends AppCompatActivity {
         double distanceInKilometers = bundle.getDouble(AppConfig.SHOW_RESULT_INTENT_DISTANCE_KEY);
         double timeInMinutes = bundle.getDouble(AppConfig.SHOW_RESULT_INTENT_TIME_KEY);
         double breakInMinutes = bundle.getDouble(AppConfig.SHOW_RESULT_INTENT_BREAK_KEY);
-        return new Run((int) distanceInKilometers * 1000, (int) timeInMinutes * 60, (int) breakInMinutes * 60);
+        return new Run((int) (distanceInKilometers * 1000), (int) timeInMinutes * 60, (int) breakInMinutes * 60);
     }
 
     private void showDistanceFromRun(Run run) {
-        distanceResult.setText(String.valueOf(run.distance / 1000));
+        distanceResult.setText(String.valueOf(run.distance / 1000f));
     }
 
     private void showCaloriesFromRun(Run run) {

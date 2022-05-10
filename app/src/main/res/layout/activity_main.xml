@@ -73,7 +73,7 @@
             android:layout_margin="10dp"
             android:hint="@string/hint_time"
             android:importantForAutofill="no"
-            android:inputType="numberDecimal"
+            android:inputType="number"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/input_distance" />
@@ -85,7 +85,7 @@
             android:layout_margin="10dp"
             android:hint="@string/hint_break"
             android:importantForAutofill="no"
-            android:inputType="numberDecimal"
+            android:inputType="number"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/input_time" />

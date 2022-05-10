@@ -7,6 +7,10 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.Locale;
+
 /**
  * Diese Anwendung erlaubt LäuferInnen, die Geschwindigkeit und den geschätzten Kalorienverbrauch
  * von einzelnen Läufen zu berechnen. Dazu werden zurückgelegte Strecke, benötigte Zeit und etwaige
@@ -54,10 +58,27 @@ public class StartActivity extends AppCompatActivity {
         // Speichern der aktuellen Werte aus den Eingabefeldern in den Extras des Intents
         // Alle Werte werden als Fließkommazahlen übergeben, um eine möglichst hohe
         // Genauigkeit für die spätere Umrechnung zu erhalten.
-        intent.putExtra(AppConfig.SHOW_RESULT_INTENT_DISTANCE_KEY, Double.parseDouble(distanceInput.getText().toString()));
-        intent.putExtra(AppConfig.SHOW_RESULT_INTENT_TIME_KEY, Double.parseDouble(timeInput.getText().toString()));
-        intent.putExtra(AppConfig.SHOW_RESULT_INTENT_BREAK_KEY, Double.parseDouble(breakInput.getText().toString()));
+        intent.putExtra(AppConfig.SHOW_RESULT_INTENT_DISTANCE_KEY, getValueFromEditText(distanceInput));
+        intent.putExtra(AppConfig.SHOW_RESULT_INTENT_TIME_KEY, getValueFromEditText(timeInput));
+        intent.putExtra(AppConfig.SHOW_RESULT_INTENT_BREAK_KEY, getValueFromEditText(breakInput));
         startActivity(intent);
+    }
+
+    private double getValueFromEditText(EditText editText) {
+        try {
+            /*
+             * Wir machen uns zu nutze, das es bei der Eingabe der Werte keine Möglichkeit gibt,
+             * ein Komma als Dezimaltrennzeichen einzugeben. Es kann nur der Punkt verwendet werden.
+             */
+            NumberFormat format = NumberFormat.getInstance(Locale.ENGLISH);
+            Number value = format.parse(editText.getText().toString());
+            if (value != null) {
+                return value.doubleValue();
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return 0d;
     }
 
 }
