@@ -35,7 +35,7 @@ public class Run {
      * @return Der durchschnittliche Pace für diesen Lauf in Minuten pro Kilometer.
      */
     public float getPace() {
-        float distanceInKilometers = distance / 1000;
+        float distanceInKilometers = distance / 1000f;
         float timeInMinutes = (totalTime - breakTime) / 60f;
         return timeInMinutes / distanceInKilometers;
     }
